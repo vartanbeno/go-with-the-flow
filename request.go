@@ -16,7 +16,7 @@ type Request struct {
 	*sync.Mutex
 }
 
-// NewRequest is a factory method to create an instance of the Request struct.
+// NewRequest is a factory method used to create an instance of the Request struct.
 // It makes sure the assigned id is unique, by appending the current Unix time in nanoseconds.
 // It also takes care of initializing the mutex, which can be easily forgotten.
 func NewRequest(id, message string, pollingInterval time.Duration) Request {
